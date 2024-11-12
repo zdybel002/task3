@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -16,8 +16,19 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         <Router>
+          <nav>
+            <li>
+              <Link to="/">Main</Link>
+            </li>
+            <li>
+              <Link to="/about">Main</Link>
+            </li>
+            <li>
+              <Link to="/cat">Main</Link>
+            </li>
+          </nav>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
